@@ -1,0 +1,691 @@
+{
+  "summary": {
+    "overall": {
+      "total_questions": 22,
+      "answerable_questions": 19,
+      "unanswerable_questions": 3
+    },
+    "retrieval_metrics": {
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.2187,
+      "context_precision": 0.9825
+    },
+    "answer_metrics": {
+      "faithfulness": 0.7973,
+      "relevance": 0.9136,
+      "exact_match": 0.1364,
+      "f1_score": 0.6366
+    },
+    "latency_metrics": {
+      "retrieval_p50_ms": 23.2,
+      "retrieval_p95_ms": 30.58,
+      "generation_p50_ms": 101.96,
+      "generation_p95_ms": 209.55,
+      "total_p50_ms": 126.8,
+      "total_p95_ms": 226.05
+    }
+  },
+  "results": [
+    {
+      "question": "What are the standard working hours at ABC Technologies?",
+      "gold_source": "Employee Handbook.pdf",
+      "gold_answer": "The standard working hours are from 9:00 AM to 6:00 PM, Monday through Friday.",
+      "predicted_answer": "The standard working hours are from 9:00 AM to 6:00 PM, Monday through Friday. (Employee Handbook.pdf) Working Hours. (Employee Handbook.pdf)",
+      "retrieved_files": [
+        "Employee Handbook.pdf",
+        "IT Security Policy.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 16.57,
+        "generation_ms": 216.64,
+        "total_ms": 233.21
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.5,
+        "context_precision": 0.833,
+        "exact_match": 0,
+        "f1_score": 0.824,
+        "faithfulness": 0.67,
+        "relevance": 0.9
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (8/12)",
+        "relevance": "API Error fallback: Q-A overlap (3/4)"
+      }
+    },
+    {
+      "question": "How should employees record their daily attendance?",
+      "gold_source": "Employee Handbook.pdf",
+      "gold_answer": "Employees are expected to mark attendance using the company's biometric system.",
+      "predicted_answer": "Employees are expected to mark attendance using the company's biometric system. (Employee Handbook.pdf) Employees should maintain a professional appearance while at work. (Employee Handbook.pdf)",
+      "retrieved_files": [
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf",
+        "Travel Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 30.76,
+        "generation_ms": 170.72,
+        "total_ms": 201.48
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.631,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.629,
+        "faithfulness": 0.78,
+        "relevance": 0.8
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (14/18)",
+        "relevance": "API Error fallback: Q-A overlap (3/6)"
+      }
+    },
+    {
+      "question": "Is there a specific dress code defined for employees?",
+      "gold_source": "Employee Handbook.pdf",
+      "gold_answer": "Employees should maintain a professional appearance while at work.",
+      "predicted_answer": "Dress Code. (Employee Handbook.pdf) Code of Conduct. (Employee Handbook.pdf)",
+      "retrieved_files": [
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf",
+        "IT Security Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 23.69,
+        "generation_ms": 96.69,
+        "total_ms": 120.37
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.631,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.0,
+        "faithfulness": 0.43,
+        "relevance": 0.68
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (3/7)",
+        "relevance": "API Error fallback: Q-A overlap (1/5)"
+      }
+    },
+    {
+      "question": "Can employees work from home or work remotely?",
+      "gold_source": "Employee Handbook.pdf",
+      "gold_answer": "Employees may work remotely with prior approval from their reporting manager.",
+      "predicted_answer": "Employees may work remotely with prior approval from their reporting manager. (Employee Handbook.pdf) The standard working hours are from 9:00 AM to 6:00 PM, Monday through Friday. (Employee Handbook.pdf)",
+      "retrieved_files": [
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf",
+        "Travel Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 26.19,
+        "generation_ms": 193.94,
+        "total_ms": 220.13
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.631,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.55,
+        "faithfulness": 0.76,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (13/17)",
+        "relevance": "API Error fallback: Q-A overlap (2/2)"
+      }
+    },
+    {
+      "question": "How long is the probation period for new employees?",
+      "gold_source": "HR Policy.pdf",
+      "gold_answer": "The probation period is six months.",
+      "predicted_answer": "The probation period is six months. (HR Policy.pdf) Employees are expected to mark attendance using the company's biometric system. (Employee Handbook.pdf)",
+      "retrieved_files": [
+        "HR Policy.pdf",
+        "Employee Handbook.pdf",
+        "Leave Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 26.13,
+        "generation_ms": 100.46,
+        "total_ms": 126.59
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.444,
+        "faithfulness": 0.77,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (10/13)",
+        "relevance": "API Error fallback: Q-A overlap (3/3)"
+      }
+    },
+    {
+      "question": "How frequently are performance reviews conducted?",
+      "gold_source": "HR Policy.pdf",
+      "gold_answer": "Performance reviews are conducted twice every year.",
+      "predicted_answer": "Performance reviews are conducted twice every year. (HR Policy.pdf) Performance Reviews. (HR Policy.pdf)",
+      "retrieved_files": [
+        "HR Policy.pdf",
+        "IT Security Policy.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 21.13,
+        "generation_ms": 196.05,
+        "total_ms": 217.18
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.7,
+        "faithfulness": 0.8,
+        "relevance": 0.9
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (8/10)",
+        "relevance": "API Error fallback: Q-A overlap (3/4)"
+      }
+    },
+    {
+      "question": "What is the annual training requirement for each employee?",
+      "gold_source": "HR Policy.pdf",
+      "gold_answer": "Every employee receives at least 20 hours of professional training annually.",
+      "predicted_answer": "Every employee receives at least 20 hours of professional training annually. (HR Policy.pdf) Each employee receives 12 casual leaves per calendar year. (Leave Policy.pdf)",
+      "retrieved_files": [
+        "HR Policy.pdf",
+        "Leave Policy.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 24.01,
+        "generation_ms": 89.49,
+        "total_ms": 113.5
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.629,
+        "faithfulness": 0.82,
+        "relevance": 0.9
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (14/17)",
+        "relevance": "API Error fallback: Q-A overlap (3/4)"
+      }
+    },
+    {
+      "question": "On what factors are promotions based at the company?",
+      "gold_source": "HR Policy.pdf",
+      "gold_answer": "Promotions are based on performance, business requirements, and leadership potential.",
+      "predicted_answer": "Promotions are based on performance, business requirements, and leadership potential. (HR Policy.pdf) The company provides equal employment opportunities regardless of gender, religion, or ethnicity. (HR Policy.pdf)",
+      "retrieved_files": [
+        "HR Policy.pdf",
+        "Employee Handbook.pdf",
+        "Travel Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 24.33,
+        "generation_ms": 98.03,
+        "total_ms": 122.36
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.556,
+        "faithfulness": 0.89,
+        "relevance": 0.9
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (16/18)",
+        "relevance": "API Error fallback: Q-A overlap (3/4)"
+      }
+    },
+    {
+      "question": "What are the requirements for setting a system password?",
+      "gold_source": "IT Security Policy.pdf",
+      "gold_answer": "Passwords must contain at least 12 characters and include uppercase, lowercase, numbers, and special characters.",
+      "predicted_answer": "Password Policy. (IT Security Policy.pdf) Passwords must contain at least 12 characters and include uppercase, lowercase, numbers, and special. (IT Security Policy.pdf)",
+      "retrieved_files": [
+        "IT Security Policy.pdf",
+        "Employee Handbook.pdf",
+        "IT Security Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 25.25,
+        "generation_ms": 92.43,
+        "total_ms": 117.68
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.5,
+        "context_precision": 0.833,
+        "exact_match": 0,
+        "f1_score": 0.757,
+        "faithfulness": 0.87,
+        "relevance": 0.7
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (13/15)",
+        "relevance": "API Error fallback: Q-A overlap (1/4)"
+      }
+    },
+    {
+      "question": "Is Multi-Factor Authentication mandatory for everyone?",
+      "gold_source": "IT Security Policy.pdf",
+      "gold_answer": "MFA is mandatory for all employees.",
+      "predicted_answer": "I couldn't find relevant information in the provided documents.",
+      "retrieved_files": [
+        "IT Security Policy.pdf",
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 16.1,
+        "generation_ms": 210.26,
+        "total_ms": 226.36
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.0,
+        "faithfulness": 1.0,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: negative answer matched",
+        "relevance": "API Error fallback: negative response matched"
+      }
+    },
+    {
+      "question": "How often is critical data backed up?",
+      "gold_source": "IT Security Policy.pdf",
+      "gold_answer": "Critical data is backed up every 24 hours.",
+      "predicted_answer": "Critical data is backed up every 24 hours. (IT Security Policy.pdf) Data Backup. (IT Security Policy.pdf)",
+      "retrieved_files": [
+        "IT Security Policy.pdf",
+        "IT Security Policy.pdf",
+        "HR Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 21.83,
+        "generation_ms": 88.9,
+        "total_ms": 110.73
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.631,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.667,
+        "faithfulness": 0.78,
+        "relevance": 0.87
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (7/9)",
+        "relevance": "API Error fallback: Q-A overlap (2/3)"
+      }
+    },
+    {
+      "question": "What is the deadline for reporting security incidents?",
+      "gold_source": "IT Security Policy.pdf",
+      "gold_answer": "Security incidents must be reported within one hour.",
+      "predicted_answer": "Security incidents must be reported within one hour. (IT Security Policy.pdf) Incident Reporting. (IT Security Policy.pdf)",
+      "retrieved_files": [
+        "IT Security Policy.pdf",
+        "IT Security Policy.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 17.74,
+        "generation_ms": 145.71,
+        "total_ms": 163.45
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.631,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.667,
+        "faithfulness": 0.82,
+        "relevance": 0.9
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (9/11)",
+        "relevance": "API Error fallback: Q-A overlap (3/4)"
+      }
+    },
+    {
+      "question": "How many casual leaves does an employee get in a calendar year?",
+      "gold_source": "Leave Policy.pdf",
+      "gold_answer": "Each employee receives 12 casual leaves per calendar year.",
+      "predicted_answer": "Each employee receives 12 casual leaves per calendar year. (Leave Policy.pdf) Employees receive 10 sick leaves annually. (Leave Policy.pdf)",
+      "retrieved_files": [
+        "Leave Policy.pdf",
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 23.95,
+        "generation_ms": 103.05,
+        "total_ms": 127.0
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.643,
+        "faithfulness": 0.71,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (10/14)",
+        "relevance": "API Error fallback: Q-A overlap (5/5)"
+      }
+    },
+    {
+      "question": "How many sick leaves are allotted to employees annually?",
+      "gold_source": "Leave Policy.pdf",
+      "gold_answer": "Employees receive 10 sick leaves annually.",
+      "predicted_answer": "Employees receive 10 sick leaves annually. (Leave Policy.pdf) Each employee receives 12 casual leaves per calendar year. (Leave Policy.pdf)",
+      "retrieved_files": [
+        "Leave Policy.pdf",
+        "Employee Handbook.pdf",
+        "Travel Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 22.4,
+        "generation_ms": 189.22,
+        "total_ms": 211.62
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.48,
+        "faithfulness": 0.71,
+        "relevance": 0.9
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (10/14)",
+        "relevance": "API Error fallback: Q-A overlap (3/4)"
+      }
+    },
+    {
+      "question": "When does an employee become eligible for earned leave?",
+      "gold_source": "Leave Policy.pdf",
+      "gold_answer": "Employees become eligible for earned leave after completing one year of service.",
+      "predicted_answer": "Employees become eligible for earned leave after completing one year of service. (Leave Policy.pdf) Each employee receives 12 casual leaves per calendar year. (Leave Policy.pdf)",
+      "retrieved_files": [
+        "Leave Policy.pdf",
+        "HR Policy.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 16.57,
+        "generation_ms": 90.18,
+        "total_ms": 106.75
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.649,
+        "faithfulness": 0.78,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (14/18)",
+        "relevance": "API Error fallback: Q-A overlap (5/5)"
+      }
+    },
+    {
+      "question": "How many earned leaves can be carried forward to the next calendar year?",
+      "gold_source": "Leave Policy.pdf",
+      "gold_answer": "A maximum of 5 earned leaves can be carried forward to the next year.",
+      "predicted_answer": "A maximum of 5 earned leaves can be carried forward to the next year. (Leave Policy.pdf) Each employee receives 12 casual leaves per calendar year. (Leave Policy.pdf)",
+      "retrieved_files": [
+        "Leave Policy.pdf",
+        "Travel Policy.pdf",
+        "HR Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 20.59,
+        "generation_ms": 192.35,
+        "total_ms": 212.94
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.683,
+        "faithfulness": 0.75,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (12/16)",
+        "relevance": "API Error fallback: Q-A overlap (6/6)"
+      }
+    },
+    {
+      "question": "What class of ticket should be booked for domestic travel?",
+      "gold_source": "Travel Policy.pdf",
+      "gold_answer": "Employees should book economy class tickets for domestic travel.",
+      "predicted_answer": "Employees should book economy class tickets for domestic travel. (Travel Policy.pdf) Domestic Travel. (Travel Policy.pdf)",
+      "retrieved_files": [
+        "Travel Policy.pdf",
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 27.03,
+        "generation_ms": 92.89,
+        "total_ms": 119.92
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.75,
+        "faithfulness": 0.69,
+        "relevance": 0.93
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (9/13)",
+        "relevance": "API Error fallback: Q-A overlap (5/6)"
+      }
+    },
+    {
+      "question": "Who must approve business class bookings for international travel?",
+      "gold_source": "Travel Policy.pdf",
+      "gold_answer": "Business class travel requires approval from the department head.",
+      "predicted_answer": "Business class travel requires approval from the department head. (Travel Policy.pdf) Employees should book economy class tickets for domestic travel. (Travel Policy.pdf)",
+      "retrieved_files": [
+        "Travel Policy.pdf",
+        "Employee Handbook.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 31.4,
+        "generation_ms": 146.52,
+        "total_ms": 177.92
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.581,
+        "faithfulness": 0.78,
+        "relevance": 0.8
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (14/18)",
+        "relevance": "API Error fallback: Q-A overlap (3/6)"
+      }
+    },
+    {
+      "question": "Within how many days must travel reimbursement claims be submitted?",
+      "gold_source": "Travel Policy.pdf",
+      "gold_answer": "Travel expenses should be submitted within seven days after completion of travel.",
+      "predicted_answer": "Travel expenses should be submitted within seven days after completion of travel. (Travel Policy.pdf) Travel Reimbursement. (Travel Policy.pdf)",
+      "retrieved_files": [
+        "Travel Policy.pdf",
+        "Leave Policy.pdf",
+        "IT Security Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 24.98,
+        "generation_ms": 97.11,
+        "total_ms": 122.09
+      },
+      "metrics": {
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "context_precision": 1.0,
+        "exact_match": 0,
+        "f1_score": 0.8,
+        "faithfulness": 0.73,
+        "relevance": 0.92
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: word overlap (11/15)",
+        "relevance": "API Error fallback: Q-A overlap (4/5)"
+      }
+    },
+    {
+      "question": "What is the policy for maternal leave?",
+      "gold_source": null,
+      "gold_answer": "I couldn't find relevant information in the provided documents.",
+      "predicted_answer": "I couldn't find relevant information in the provided documents.",
+      "retrieved_files": [
+        "Leave Policy.pdf",
+        "Leave Policy.pdf",
+        "Travel Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 19.32,
+        "generation_ms": 147.34,
+        "total_ms": 166.66
+      },
+      "metrics": {
+        "recall_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "context_precision": 0.0,
+        "exact_match": 1,
+        "f1_score": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: negative answer matched",
+        "relevance": "API Error fallback: negative response matched"
+      }
+    },
+    {
+      "question": "What is the company's policy on pet allowances?",
+      "gold_source": null,
+      "gold_answer": "I couldn't find relevant information in the provided documents.",
+      "predicted_answer": "I couldn't find relevant information in the provided documents.",
+      "retrieved_files": [
+        "Travel Policy.pdf",
+        "IT Security Policy.pdf",
+        "HR Policy.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 21.01,
+        "generation_ms": 87.7,
+        "total_ms": 108.71
+      },
+      "metrics": {
+        "recall_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "context_precision": 0.0,
+        "exact_match": 1,
+        "f1_score": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: negative answer matched",
+        "relevance": "API Error fallback: negative response matched"
+      }
+    },
+    {
+      "question": "How much is the daily allowance for international business trips?",
+      "gold_source": null,
+      "gold_answer": "I couldn't find relevant information in the provided documents.",
+      "predicted_answer": "I couldn't find relevant information in the provided documents.",
+      "retrieved_files": [
+        "Travel Policy.pdf",
+        "Leave Policy.pdf",
+        "Employee Handbook.pdf"
+      ],
+      "latency": {
+        "retrieval_ms": 22.71,
+        "generation_ms": 100.86,
+        "total_ms": 123.57
+      },
+      "metrics": {
+        "recall_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "context_precision": 0.0,
+        "exact_match": 1,
+        "f1_score": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 1.0
+      },
+      "eval_reasons": {
+        "faithfulness": "API Error fallback: negative answer matched",
+        "relevance": "API Error fallback: negative response matched"
+      }
+    }
+  ]
+}
